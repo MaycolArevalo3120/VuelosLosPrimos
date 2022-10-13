@@ -1,19 +1,28 @@
+  
 <ul>
-  <li *ngFor="let usuario for usuarios">
-    {{usuario}}
+  <li *ngFor="let lugar of AndyFilas">
+    {{lugar}}
   </li>
-
+</ul>
 
 <div class="plane">
     <div class="cockpit">
       <h1>Vuelos</h1>
     </div>
-    <div class="exit exit--front fuselage">
-      
-    </div>
-    <ol class="cabin fuselage">
-      <li class="row row--1">
-        <ol class="seats" type="I">
+    <div class="exit exit--front fuselage"></div>
+
+
+    <!---------------------------------asientos--------------------------------------->
+    <ol  class="cabin fuselage">
+      <li  *ngFor="let fila of AndyFilas"  class="row row--1">
+        <ol class="seats" type="A">
+          <li *ngFor="let columna of AndyColumna"  class="seat">
+            <input  type="checkbox" id="fila" />
+            <label for="fila">{{fila+""+columna}}</label>
+          </li>
+        </ol>
+        <!--
+        <ol class="seats" type="A">---------------------------------
           <li class="seat">
             <input type="checkbox" id="1A" />
             <label for="1A">1A</label>
@@ -38,7 +47,8 @@
             <input type="checkbox" id="1F" />
             <label for="1F">1F</label>
           </li>
-        </ol>
+        </ol>------------------------------------------------------
+                    
       </li>
       <li class="row row--2">
         <ol class="seats" type="A">
@@ -123,7 +133,7 @@
             <label for="4F">4F</label>
           </li>
         </ol>
-      </li>
+      </li>--><!--
       <li class="row row--5">
         <ol class="seats" type="A">
           <li class="seat">
@@ -291,7 +301,7 @@
             <label for="10F">10F</label>
           </li>
         </ol>
-      </li>
+      </li>-->
     </ol>
     <div class="exit exit--back fuselage">
       

@@ -14,11 +14,7 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Guardar(aerolinea:Aerolinea){
-    this.service.Createaerolinea(aerolinea).subscribe(data=>{alert("Se agregó con exito");
-    //this.router.navigate({"listar"})
-    })
-  }
+  
 
 
 }

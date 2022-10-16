@@ -30,6 +30,9 @@ export class AppComponent {
   Asientos(){
     this.router.navigate(["seats"])
   }
+  Aviones(){
+    this.router.navigate(["aviones"])
+  }
 
   DataLoad(){
     //this.dataService.getData().subscribe(=> {c})

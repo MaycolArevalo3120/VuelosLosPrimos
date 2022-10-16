@@ -13,6 +13,7 @@ import {ServiceService} from '../app/Service/service.service';
 import { SeatsComponent } from './Persona/seats/seats.component';
 import { LoginComponent } from './Persona/login/login.component';
 import { CommonModule } from "@angular/common";
+import { AvionComponent } from './Persona/avion/avion.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CommonModule } from "@angular/common";
     EditComponent,
     SeatsComponent,
     AddComponent,
-    LoginComponent
+    LoginComponent,
+    AvionComponent
   ],
   imports: [
     BrowserModule,

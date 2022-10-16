@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import {Aerolinea} from '../Modelo/Aerolinea'
+import { Asiento } from '../Modelo/Asiento';
+import { Avion } from '../Modelo/Avion';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class ServiceService {
     return this.http.get<Aerolinea[]>(this.url)
   }
 
-  Createaerolinea(aerolinea:Aerolinea){
-    return this.http.post<Aerolinea>(this.url,aerolinea);
+  getAvion(){
+    return this.http.get<Avion[]>('http://localhost:8099/api/avion/getListadoAvionXId?IdAvion=1')
   }
 }

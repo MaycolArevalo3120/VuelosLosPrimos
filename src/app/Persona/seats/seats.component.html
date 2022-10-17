@@ -10,7 +10,7 @@
     <li *ngFor="let f of Filas" class="row row--1">
       <ol class="seats">
         <li *ngFor="let c of Columna"
-          [ngClass]="{'Clase1': estadoAsiento[f-1][c-1] == 1, 'Clase2': estadoAsiento[f-1][c-1] == 0}">
+          [ngClass]="{'clase1': estadoAsiento[f-1][c-1] == 1, 'clase2': estadoAsiento[f-1][c-1] == 0}">
           <input type="checkbox" id={{crearID(f.toString(),c.toString())}} [checked]="estadoAsiento[f-1][c-1] == 1"
             (click)="guardarEstadoAsiento($event)" />
           <label for={{crearID(f.toString(),c.toString())}}>{{crearID(f.toString(),c.toString())}}</label>

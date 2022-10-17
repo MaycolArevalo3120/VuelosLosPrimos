@@ -8,7 +8,7 @@ import {AerolineaData} from './Modelo/AerolineaData'
 export class DataService {
 
   constructor(private http: HttpClient) { 
-    console.log('Service is woeking!')
+    //console.log('Service is woeking!')
   }
   getData(){
     return this.http.get<AerolineaData[]>('http://localhost:8099/api/aerolinea/IdNombreAerolinea') 

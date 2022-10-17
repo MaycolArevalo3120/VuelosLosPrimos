@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router } from '@angular/router';
 import { Asiento } from 'src/app/Modelo/Asiento';
 import { Avion } from 'src/app/Modelo/Avion';
+import { AvionService } from 'src/app/Service/Avion/avion.service';
 import { ServiceService } from 'src/app/Service/service.service';
 
 
@@ -13,17 +14,18 @@ import { ServiceService } from 'src/app/Service/service.service';
 export class SeatsComponent implements OnInit {
    
   asientos:Asiento[] = [];
-  constructor(private serviceAsiento:ServiceService, private router:Router) { }
+  Aviones: any;
+  constructor(
+    private serviceAsiento:ServiceService,
+    private router:Router,
+    public avionService:AvionService,
+    ) { }
   ngOnInit(): void {
-
-    
     this.numeroFilas = 100
     this.numeroColumnas = 6
     this.ingresoDeFilasColumas()
     this.estadoAsiento = Array.from(Array(this.numeroFilas), () => new Array(this.numeroColumnas).fill(0))
     this.asientosPreCargados()
-    
-
   }
 
 
@@ -33,6 +35,7 @@ export class SeatsComponent implements OnInit {
     this.estadoAsiento[2][4] = 1
     this.estadoAsiento[6][2] = 1
     this.estadoAsiento[4][2] = 1
+   
   }
 
 

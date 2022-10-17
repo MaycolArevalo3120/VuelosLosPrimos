@@ -10,7 +10,6 @@ import {ServiceService} from '../../Service/service.service'
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent implements OnInit {
-
   aerolineas: Aerolinea[] = [];
   constructor(private service:ServiceService, private router:Router) { }
 
@@ -19,6 +18,7 @@ export class ListarComponent implements OnInit {
     .subscribe(data=>{
       this.aerolineas=data;
     })
+    
   }
 
 }

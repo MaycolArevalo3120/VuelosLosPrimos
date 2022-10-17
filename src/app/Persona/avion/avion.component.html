@@ -6,7 +6,8 @@
         <button class="btn btn-danger">Delete</button>
     </td>
 </tr>
--->
+
+
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -35,3 +36,19 @@
         </div>
     </div>
 </div>
+-->
+<form [formGroup]="avionForm" (ngSubmit)="Guardar">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nombre</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nombre</label>
+        <select name="nombre" id="nombre" formControlName="nombre" class="form-control ">
+            <option value="item.idmodelo" *ngFor="let item of Aviones">{{item.nombre}}</option>
+        </select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

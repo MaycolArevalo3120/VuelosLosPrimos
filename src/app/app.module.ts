@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './Persona/listar/listar.component';
 import { AddComponent } from './Persona/add/add.component';
 import { EditComponent } from './Persona/edit/edit.component';
-import {FormsModule}from '@angular/forms'
+import {FormsModule, ReactiveFormsModule}from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
 import {DataService} from './data.service';
 import {ServiceService} from '../app/Service/service.service';
@@ -14,6 +14,7 @@ import { SeatsComponent } from './Persona/seats/seats.component';
 import { LoginComponent } from './Persona/login/login.component';
 import { CommonModule } from "@angular/common";
 import { AvionComponent } from './Persona/avion/avion.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { AvionComponent } from './Persona/avion/avion.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [DataService,ServiceService],
   bootstrap: [AppComponent]

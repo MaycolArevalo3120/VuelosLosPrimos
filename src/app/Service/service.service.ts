@@ -18,6 +18,6 @@ export class ServiceService {
   }
 
   getAvion(){
-    return this.http.get<Avion[]>('http://localhost:8099/api/avion/getListadoAvionXId?IdAvion=1')
+    return this.http.get<Avion[]>('http://localhost:8099/api/avion/getListadoAvion')
   }
 }

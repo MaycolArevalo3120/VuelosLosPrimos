@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HAMMER_LOADER } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Avion } from 'src/app/Modelo/Avion';
 import { ServiceService } from 'src/app/Service/service.service';
@@ -17,9 +18,17 @@ export class AvionComponent implements OnInit {
 
     this.service.getAvion().subscribe(data=>{
       this.avion=data;
+      this.cualquier(data)
     })
+
+    console.log(this.avion);
   }
 
+  public cualquier(hala:any){
+    hala=this.avion;
+    //console.log(hala[1].filas);
+    return hala;
+  }
 
 
 }

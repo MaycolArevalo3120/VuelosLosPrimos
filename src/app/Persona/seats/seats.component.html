@@ -3,26 +3,22 @@
     <h1>Vuelos</h1>
   </div>
   <div class="exit exit--front fuselage"></div>
-
-
   <!---------------------------------asientos--------------------------------------->
-  <ol class="cabin fuselage">
-    <li *ngFor="let f of Filas" class="row row--1">
-      <ol class="seats">
-        <li *ngFor="let c of Columna"
-          [ngClass]="{'clase1': estadoAsiento[f-1][c-1] == 1, 'clase2': estadoAsiento[f-1][c-1] == 0}">
-          <input type="checkbox" id={{crearID(f.toString(),c.toString())}} [checked]="estadoAsiento[f-1][c-1] == 1"
-            (click)="guardarEstadoAsiento($event)" />
-          <label for={{crearID(f.toString(),c.toString())}}>{{crearID(f.toString(),c.toString())}}</label>
-        </li>
-      </ol>
-  </ol>
-  <div class="exit exit--back fuselage">
-
-
-    <!--<button [ngClass]="{'Clase1': estadoAsiento[0][0] === 1, 'Clase2': estadoAsiento[0][0] === 0}">clase1</button>--->
-
-
-  </div>
-  <!--<button (click)="Guardar()" class="btn btn-danger" style="margin-top: 10px;">Guardar</button>--->
+  <Form action="">
+    <ol class="cabin fuselage" class="form-group">
+      <li *ngFor="let f of Filas" class="row row--1">
+        <ol class="seats">
+          <li *ngFor="let c of Columna"
+            [ngClass]="{'clase1': estadoAsiento[f-1][c-1] == 1, 'clase2': estadoAsiento[f-1][c-1] == 0}">
+            <input type="checkbox" id={{crearID(f.toString(),c.toString())}} [checked]="estadoAsiento[f-1][c-1] == 1"
+              (click)="guardarEstadoAsiento($event)" (click)="SeleccionCheck((f-1),(c-1))" />
+            <label for={{crearID(f.toString(),c.toString())}}>{{crearID(f.toString(),c.toString())}}</label>
+          </li>
+        </ol>
+    </ol>
+    <button (click)="GuardarSeleccioestadoAsiento()" class="btn btn-danger" style="margin-top: 10px;">Guardar Asiento</button>
+    <div class="exit exit--back fuselage">
+    </div>
+    <!--<button (click)="Guardar()" class="btn btn-danger" style="margin-top: 10px;">Guardar</button>--->
+  </Form>
 </div>

@@ -111,30 +111,35 @@ export class SeatsComponent implements OnInit {
 
   //  estadoAsiento: any[][] = [];
   GuardarSeleccioestadoAsiento() {
-    /*
-    for (let i = 0; i < this.estadoAsiento.length; i++) {
+    
+    //for (let i = 0; i < this.estadoAsiento.length; i++) {
       //const element = array[i];
       
-      this.asiento.fila=
+      this.asiento.fila=this.asiento.fila
       //this.asiento.columna=columna seleccionada
-      this.asiento.nombre="1-0"
+      debugger;
+      console.log(this.asiento.nombre)
 
       this.serviceAsiento.CrearAsiento(this.asiento)
       .subscribe(data => {
         alert("se agrego asiento");
         this.router.navigate(["seats"])
       })
-    }
-    */
-   
+    //
+    
 
-    if (this.estadoAsiento[1][1] == 1) {
-      
+    //debugger;
+    //var fill = parseInt(this.asiento.fila.toString())
+    //var coll= parseInt(this.asiento.columna.toString())
+    //console.log(tipo)
+    //console.log(this.estadoAsiento[fill][coll])
+/*
+    if (this.estadoAsiento[parseInt(this.asiento.fila.toString())][parseInt(this.asiento.columna.toString())] == 1) {
+      console.log("si está en estado reservado")
     }
-
+*/
 
   }
-
 
   asiento: Asiento = new Asiento();
   Guardar(fila:String,columna:String) {

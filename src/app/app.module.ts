@@ -14,6 +14,7 @@ import { SeatsComponent } from './Persona/seats/seats.component';
 import { LoginComponent } from './Persona/login/login.component';
 import { CommonModule } from "@angular/common";
 import { AvionComponent } from './Persona/avion/avion.component';
+import { FormGroup } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,15 @@ import { AvionComponent } from './Persona/avion/avion.component';
     SeatsComponent,
     AddComponent,
     LoginComponent,
-    AvionComponent
+    AvionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [DataService,ServiceService],
   bootstrap: [AppComponent]
